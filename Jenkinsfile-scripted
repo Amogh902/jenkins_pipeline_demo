@@ -1,0 +1,30 @@
+// 'node' allocates a Jenkins executor and runs the pipeline inside that node.
+
+// In our setup, Jenkins itself will execute this pipeline.
+node {
+
+    // Define the Build stage.
+    // 'stage' is used to organize the pipeline into logical sections and display them in Jenkins.
+
+    stage('Build') {
+
+        // 'echo' prints a message to the Jenkins console.
+        echo 'Building Hello World application'
+    }
+
+
+    // Define the Test stage.
+    stage('Test') {
+
+        // Execute the test-related logic.
+        echo 'Testing Hello World application'
+    }
+
+
+    // Define the Deploy stage.
+    stage('Deploy') {
+
+        // Execute the deployment-related logic.
+        echo 'Deploying Hello World application'
+    }
+}
